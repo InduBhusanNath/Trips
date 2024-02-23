@@ -38,6 +38,7 @@ var sessionController=require('../controllers/sessionController.js');
 var blogController=require('../controllers/blogController.js');
 var contactUsMessageModel=require('../controllers/contactUsMessageController.js');
 var autoCreateAdminController=require('../controllers/autoCreateAdminController.js');
+var cabBookingController=require('../controllers/cabBookingController.js');
 
 /* GET*/
 app.get('/test', function(req, res) {
@@ -52,6 +53,8 @@ app.get('/admin_logout',sessionController.adminLogOut);
 app.get('/adminDashboard/blogs/',blogController.readBlog);
 app.get('/adminDashboard/blogs/show_blog',blogController.edit_displayBlog);
 app.get('/adminDashboard/contactus-messages/',contactUsMessageModel.readMessages);
+app.get('/adminDashboard/cab-booking-data/',cabBookingController.readCabBooking);
+app.get('/adminDashboard/manage-cab-booking/cab-booking-processing/get-cab-client-data/',cabBookingController.clientCabBooking);
 
     
 
@@ -74,6 +77,8 @@ app.post('/adminDashboard/blogs/show_blog/update-blog-content',blogController.ed
 app.post('/adminDashboard/blogs/show_blog/delete-blog-content',blogController.delete_blogContent);
 app.post('/contact-us-message',contactUsMessageModel.visitorMessage);
 app.post('/adminDashboard/contactus-messages/delete-message/',contactUsMessageModel.deleteMessage);
+app.post('/create-cab-booking/',cabBookingController.createCabBooking);
+
 
 
 module.exports = app;

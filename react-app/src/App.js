@@ -6,6 +6,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import HomePage from "./frontend/home_page";
+import AboutUs from "./frontend/aboutus";
+import DelhiTaxi from "./frontend/delhi-taxi";
+import GuwahatiTaxi from "./frontend/guwahati-taxi";
+import BlogPage from "./frontend/blog-page";
+import ContactUs from "./frontend/contactus";
+
 import AdminLogin from "./backend/admin_login";
 import AdminDashboard from "./backend/admin_dashboard";
 import AdminUsers from "./backend/admin_users";
@@ -13,10 +20,37 @@ import ForgotPassword from "./backend/forgot_password";
 import Blog from "./backend/blogs";
 import WriteBlog from "./backend/write_blog";
 import ShowBlog from "./backend/show_blog";
-import ContactUs from "./frontend/contactus";
+import ContactUsMessage from "./frontend/contactus_message";
 import MessagesContactUs from "./backend/contactus_messages";
+import ManageCabBooking from "./backend/manage-cab-booking";
+import CabBookingProcessing from "./backend/cab-booking-processing";
+
 
 const router=createBrowserRouter([
+  {
+     path:"/",
+     element:<HomePage/>
+  },
+  {
+   path:"/aboutus",
+   element:<AboutUs/>
+  },
+  {
+   path:"/delhi-taxi",
+   element:<DelhiTaxi/>
+  },
+  {
+   path:"/guwahati-taxi",
+   element:<GuwahatiTaxi/>
+  },
+  {
+   path:"/blog-page",
+   element:<BlogPage/>
+  },
+  {
+   path:"/contactus",
+   element:<ContactUs/>
+  },
   {
      path:"/adminLogin",
      element:<AdminLogin/>
@@ -47,13 +81,22 @@ const router=createBrowserRouter([
          element:<MessagesContactUs/>
 
       }
+      
 
     ]
        
   },
+   {  
+   path:"/adminDashboard/manage-cab-booking/",
+   element:<ManageCabBooking/>
+   },
+   {  
+   path:"/adminDashboard/manage-cab-booking/cab-booking-processing/",
+   element:<CabBookingProcessing/>
+   },
    {
       path:"/contactus",
-      element:<ContactUs/>
+      element:<ContactUsMessage/>
    },
     {
      path:"/forgotPassword",

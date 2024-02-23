@@ -6,6 +6,7 @@ import { faGear } from '@fortawesome/free-solid-svg-icons';
 import {faHouse} from '@fortawesome/free-solid-svg-icons';
 import {faBlog} from '@fortawesome/free-solid-svg-icons';
 import {faEnvelopesBulk} from '@fortawesome/free-solid-svg-icons';
+import {faTaxi} from '@fortawesome/free-solid-svg-icons';
 
 
 import React from 'react';  
@@ -45,6 +46,9 @@ function TechnicalSeo(){
                 <tbody>
                     <tr>
                          <td className="bg-transparent"><FontAwesomeIcon icon={faHouse}/>&nbsp;<Link to="/adminDashboard/" className="action">DASHBOARD</Link></td>                                 
+                    </tr>
+                    <tr>
+                         <td className="bg-transparent"><FontAwesomeIcon icon={faTaxi} />&nbsp;<Link to="/adminDashboard/manage-cab-booking/" className="action">Cab Management</Link></td> 
                     </tr>
                     <tr>
                          <td className="bg-transparent"><FontAwesomeIcon icon={faBlog}/>&nbsp;<Link to="/adminDashboard/blogs/" className="action">Blogs</Link></td> 

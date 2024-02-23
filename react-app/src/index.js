@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import './css/app.css';
 import './css/form.css';
 import './css/font.css';
+import './css/menu.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

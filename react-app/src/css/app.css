@@ -46,6 +46,15 @@
 .background-khaki{
       background-color:khaki;
 }
+.background-peachpuff{
+      background-color: peachpuff;
+}
+.background-blanchedalmond{
+       background-color: blanchedalmond;
+}
+.background-bisque{
+       background-color: bisque;
+}
 
 .color-gold{
        color:gold;
@@ -149,6 +158,15 @@
       padding:1px;    
       cursor:pointer;
 }
+.show_btn{
+       background-color:lavender;
+       color:black;
+       font-size:24px;
+       border:1px solid red;
+       padding:1px;    
+       cursor:pointer;
+
+}
 .collapse_button{
        background-color:transparent;
        width:100%;
@@ -192,7 +210,7 @@
       height:100%;
 }
 .whatsapp{
-       position:fixed;      
+       position:fixed;    
        
 }
 .collapse_text2{
@@ -227,4 +245,7 @@
        transition: max-height 0.2s ease-out;
        background-color: transparent;
 
+}
+.shadow{
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
