@@ -64,7 +64,7 @@ function Body(){
                                      
                                </section>
                                <section>
-                                    <p className="font font22 fw-bold">OUR EXCELLENCE</p>
+                                    <p><img src="./GeneralImages/OurExcellence.png" alt="cab service" className="img-fluid"/></p>
                                <div className="card-group font font18">
                                               <div className="card bg-transparent border-info">
                                                         <div className="card-header bg-transparent border-info text-center">&#8377;&nbsp;<br/>REASONABLE FARES</div>
@@ -106,7 +106,7 @@ function Body(){
                 </div>
                 <div className="row background-azure padding25">
                      <div className="col-sm-12">
-                         <span className="font font22 fw-bold">SERVICES FOR YOU</span>                         
+                         <span><img src="./GeneralImages/Services4u.png" alt="book taxi" className="img-fluid"/></span>                         
                      </div>                     
                 </div>
                 <div className="row background-azure padding25">
