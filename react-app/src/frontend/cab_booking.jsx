@@ -27,6 +27,7 @@ export default function CabBooking(){
          const [phoneMsg,setPhoneMsg]=useState('');
          const [email,setEmail]=useState('');
      return(<>
+                
              <form method="post" onSubmit={submitCabForm}>
                          <div className="form-group">
                                  <input type="hidden" className="form-control" name="n_reqDate" value={reqDate}/>

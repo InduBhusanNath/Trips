@@ -55,17 +55,19 @@ function ProspectMessage(){
      return(<>
          <div className="col-sm-12">
              <span className="small text-danger">{ms1}</span>
+             <br/>
+             <span className="font font20">Message Us Your Query, We Will Get Back to You.....</span>
              <form method="post" onSubmit={submitContactUsMessage}>
                 <div className="form-group">                     
-                     <input type="text" className="form-control" name="n_date" value={msgdate}/>
+                     <input type="hidden" className="form-control" name="n_date" value={msgdate}/>
                  </div>
                  
                  <div className="form-group">
-                     <label>Name</label>
+                     <label>Name&#42;</label>
                      <input type="text" className="form-control" name="n_name" value={name} onChange={(e)=>{setName(e.target.value)}}/>
                  </div>
                  <div className="form-group">
-                     <label>Mobile No</label>
+                     <label>Mobile No&#42;</label>
                      <input type="text" className="form-control" name="n_contactno" value={contactNo} onChange={(e)=>{setContactNo(e.target.value)}}/>
                  </div>
                  <div className="form-group">

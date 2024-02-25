@@ -55,6 +55,23 @@
 .background-bisque{
        background-color: bisque;
 }
+.background-lightskyblue{
+      background-color:lightskyblue;
+}
+.background-lightblue{
+      background-color: lightblue;
+}
+.background-honeydew{
+      background-color: honeydew;
+}
+.background-salmon{
+      background-color:salmon;
+}
+.background-lightsalmon{
+      background-color: lightsalmon;
+}
+
+
 
 .color-gold{
        color:gold;
@@ -198,6 +215,7 @@
        text-decoration:none;
        cursor:pointer;
        color:black;
+       font-weight:bold;
 }
 .shown{
       display: block;
@@ -249,3 +267,9 @@
 .shadow{
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.margin0{
+      margin:0px;
+}
+        
+
+        

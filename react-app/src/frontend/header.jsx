@@ -7,7 +7,7 @@ export default function Header(){
 }
 function HeaderBar(){
      return(<>
-           <div className="row row padding10 bg-info d-sm-block d-md-none d-lg-none"><MobileMenu/></div>
+           <div className="row padding10 bg-info d-sm-block d-md-none d-lg-none"><MobileMenu/></div>
            <div className="row padding10 background-peachpuff">                 
                  <div className="col-sm-2"><Logo/></div>  
                  <div className="col-sm-7"><Nav/></div>
@@ -20,7 +20,8 @@ function HeaderBar(){
 function Logo(){
      return(<>
            <section className="text-center padding10">
-                <img src="./MainImages/logo.png" className="img-fluid w-75" alt="AeietyTrips"/>
+                <Link to="/" className="text-decoration-none"><img src="./MainImages/logo.png" className="img-fluid w-75" alt="AeietyTrips"/></Link>
+                
           </section>
      </>);
 }
