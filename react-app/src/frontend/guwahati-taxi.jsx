@@ -1,12 +1,14 @@
 import Header from "./header";
 import Footer from "./footer";
 import {Helmet} from "react-helmet";
+import { Link } from "react-router-dom";
 
 export default function GuwahatiTaxi(){
      return(<>
                 <TechnicalSEO/>
                 <div className="container-fluid">
                      <Header/>
+                     <BreadCrumb/>
                      <Body1/>
                      <Body2/>
                      <Footer/>
@@ -27,6 +29,18 @@ function TechnicalSEO(){
                 <meta property="og:image" content="path/to/image.jpg" />
             </Helmet>
      
+     </>);
+}
+{/*Breadcrumb*/}
+function BreadCrumb(){
+     return(<>
+               <div className="row bg-transparent">
+                    <div className="col-sm-12">
+                         <section className="padding25 font font18">
+                                   <Link to="/" className="text-decoration-none text-dark">HOME</Link>&gt;<Link to="/aboutus" className="text-decoration-none text-dark">About Us</Link>&gt;Guwahati Taxi Service
+                         </section>
+                    </div>
+              </div>
      </>);
 }
 {/*Body1*/}

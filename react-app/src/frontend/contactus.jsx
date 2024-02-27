@@ -1,6 +1,7 @@
 import Header from "./header";
 import Footer from "./footer";
 import {Helmet} from "react-helmet";
+import { Link } from "react-router-dom";
 import ContactUsMessage from "./contactus_message";
 export default function ContactUs(){
        return(<>
@@ -8,6 +9,7 @@ export default function ContactUs(){
                 <div className="container-fluid">                         
                          <Header/>
                          <Banner/>
+                         <BreadCrumb/>
                          <Body/>
                          <Footer/>                
                  </div>
@@ -43,6 +45,18 @@ function Banner(){
  
         </>);
 }
+{/*Breadcrumb*/}
+function BreadCrumb(){
+        return(<>
+                  <div className="row bg-transparent">
+                       <div className="col-sm-12">
+                            <section className="padding25 font font18">
+                            <Link to="/" className="text-decoration-none text-dark">HOME</Link>&gt;<Link to="/aboutus" className="text-decoration-none text-dark">About Us</Link>&gt;<Link to="/blog-page" className="text-decoration-none text-dark">Blogs</Link>&gt;Contact Us
+                            </section>
+                       </div>
+                 </div>
+        </>);
+    }
 {/*Body*/}
 function Body(){
          return(<>

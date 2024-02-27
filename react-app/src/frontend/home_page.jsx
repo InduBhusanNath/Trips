@@ -137,7 +137,7 @@ function Body(){
                 </div>
                 <div className="row background-aliceblue padding25">
                           <div className="col-sm-6">
-                                         <p className="font font22 fw-bold">FAQs</p>
+                                         <p><img src="./GeneralImages/FAQ.png" alt="cab service" className="img-fluid"/></p>
                                <section className="padding10">
                                     
                                     <Collapsible className="font font22" trigger="How to Book Taxi With Aeiety Trips?&#5161;">
@@ -164,7 +164,7 @@ function Body(){
                                    
                           </div>
                           <div className="col-sm-6">
-                               <p className="font font22 fw-bold">NEED HELP?</p>
+                               <p><img src="./GeneralImages/NeedHelp.png" alt="cab service" className="img-fluid"/></p>
                                <section className="font font20 bg-info shadow rounded padding25">
 
                                We are ready to help you at every step during your taxi booking journey.
