@@ -56,6 +56,7 @@ app.get('/adminDashboard/contactus-messages/',contactUsMessageModel.readMessages
 app.get('/adminDashboard/cab-booking-data/',cabBookingController.readCabBooking);
 app.get('/adminDashboard/manage-cab-booking/cab-booking-processing/get-cab-client-data/',cabBookingController.clientCabBooking);
 
+
     
 
 
@@ -78,6 +79,10 @@ app.post('/adminDashboard/blogs/show_blog/delete-blog-content',blogController.de
 app.post('/contact-us-message',contactUsMessageModel.visitorMessage);
 app.post('/adminDashboard/contactus-messages/delete-message/',contactUsMessageModel.deleteMessage);
 app.post('/create-cab-booking/',cabBookingController.createCabBooking);
+app.post('/update-cab-booking/',cabBookingController.updateCabBooking);
+app.post('/get-delete-cab-booking-data/',cabBookingController.getDeleteCabBookingData);
+app.post('/delete-cab-booking-data/',cabBookingController.deleteCabBookingData);
+
 
 
 

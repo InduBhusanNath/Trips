@@ -16,6 +16,8 @@ export default function CabBookingProcessing(){
 
 {/*Edit Data*/}
 function EditCabData(){
+      const [uid]=useState(pid);
+      const [resMsg,setResMsg]=useState('');
       const [showEdit,setShowEdit]=useState('hidden');
       const [hideEdit,setHideEdit]=useState('shown');
       
@@ -26,9 +28,9 @@ function EditCabData(){
       const [pickupDate,setPickupDate]=useState('');
       const [pickupDateMsg,setPickupDateMsg]=useState('');
       const [readOnlyPickupDate,setReadOnlyPickupDate]=useState(false);
-      const [dropDate,setDropDate]=useState('');
-      const [dropDateMsg,setDropDateMsg]=useState('');
-      const [readOnlyDropDate,setReadOnlyDropDate]=useState(false);
+      const [returnDate,setReturnDate]=useState('');
+      const [returnDateMsg,setReturnDateMsg]=useState('');
+      const [readOnlyReturnDate,setReadOnlyReturnDate]=useState(false);
       const [pickupTime,setPickupTime]=useState('');
       const [pickupAddress,setPickupAddress]=useState('');
       const [pickupAddressMsg,setPickupAddressMsg]=useState('');
@@ -39,75 +41,71 @@ function EditCabData(){
       const [phone,setPhone]=useState('');
       const [phoneMsg,setPhoneMsg]=useState('');
       const [email,setEmail]=useState('');
+       
+
+      
 
       useEffect(()=>{
            axios.get("/adminDashboard/manage-cab-booking/cab-booking-processing/get-cab-client-data/?id="+pid)
            .then(response=>{
-                setTripType(response.data.tripType);
+                setTripType(response.data.tripType);                                        
                 setPickupDate(response.data.tripPickupDate);
-                setDropDate(response.data.tripDropDate);
+                setReturnDate(response.data.tripReturnDate);
                 setPickupTime(response.data.tripPickupTime);
                 setPickupAddress(response.data.tripPickupAddress);
                 setDropAddress(response.data.tripDropAddress);
                 setName(response.data.tripName);
                 setPhone(response.data.tripPhone);
-                
-
-
-
-
-
-
-
-               
-
+                setEmail(response.data.tripEmail); 
            })
-           .catch(error=>{
+           .catch(error=>{               
 
            });
       },[]);
-
-
+       
+           
+           
 
       {/* Post Edit Data*/}
 
          function submitCabForm(e){
           e.preventDefault();
-          if(oneWayChecked===false && roundWayChecked===false){
-                  setTripTypeMsg('Select Your Trip Type.....');
-                  return;
-          }
+          
           if(!pickupDate){
-                  setPickupDateMsg('Select Your Pickup Date.....');
+                  setPickupDateMsg('Select Pickup Date.....');
                   return;
           }
-          if(tripType==='roundWay' && !dropDate){
-                  setDropDateMsg('Select Your Drop Date.....');
+          if(tripType==='roundWay' && !returnDate){
+                  setReturnDateMsg('Select Return Date.....');
                   return;
-          }
+          } 
+           if(returnDate==='00-00-0000' && tripType==='roundWay'){ 
+               setReturnDateMsg('Select Return Date.....');
+               return;                  
+           }
           if(!pickupAddress){
-                  setPickupAddressMsg('Type Your Pickup Address.....');
+                  setPickupAddressMsg('Type Pickup Address.....');
                   return;                 
           }
           if(!dropAddress){
-                  setDropAddressMsg('Type Your Drop Address.....');
+                  setDropAddressMsg('Type Drop Address.....');
                   return;                        
           }
           if(!name){
-                  setNameMsg('Type Your Name.....');
+                  setNameMsg('Type Customer Name.....');
                   return;                         
           }
           if(!phone){
-                  setPhoneMsg('Type Your Phone No.....');
+                  setPhoneMsg('Type Customer Phone No.....');
                   return;
           }
 
           var post_data={
-                  
+                  "n_uid":uid,
                   "n_tripType":tripType,
                   "n_pickupDate":pickupDate,
                   "n_pickupTime":pickupTime,
-                  "n_dropDate":dropDate,
+                  "n_returnDate":returnDate,
                   "n_pickupAddress":pickupAddress,
                   "n_dropAddress":dropAddress,
                   "n_name":name,
@@ -116,14 +114,14 @@ function EditCabData(){
                   "n_processed":'No'
           }
 
-          axios.post('/create-cab-booking/',post_data,{
+          axios.post('/update-cab-booking/',post_data,{
                  headers:{'Content-Type':'application/JSON'}
           })
           .then(response=>{
-                 alert(response.data)
+                 setResMsg(response.data);                 
           })
           .catch(error=>{
-                 alert(error)
+                setResMsg(error);
           });
 
 
@@ -146,17 +144,20 @@ function ShowCabData(){
                      <div className="col-sm-6">
                           <section className={showEdit} >
                                     <div className="popup">
-                                         <span className={hideEdit} onClick={()=>{setShowEdit('hidden');}}><span className="hide_btn">&#10060;</span></span>
+                                         
+                                         <span className={hideEdit} onClick={()=>{setShowEdit('hidden');}}><span className="hide_btn">&#10060;</span></span><br/>
+                                         <span className="small text-danger">{resMsg}</span>
                                          <form method="post" onSubmit={submitCabForm}>
+                                              <div className="form-group">
+                                                        <input type="hidden" className="form-control" name="n_uid" value={uid}/>
+                                              </div>
                                
                                               <label>Trip Type&#42;</label>
                                               <div className="form-check">
-                                                   <input className="form-check-input" type="radio" name="n_oneWay" checked={oneWayChecked} value="oneWay" onChange={(e)=>{setOneWayChecked(true);setroundWayChecked(false);setReadOnlyDropDate(true);setDropDate('NA');setTripType(e.target.value);}}/>
-                                                   <label>One Way</label>
-                                              </div>
-                                              <div className="form-check">
-                                                   <input className="form-check-input" type="radio" name="n_roundWay" checked={roundWayChecked} value="roundWay" onChange={(e)=>{setOneWayChecked(false);setroundWayChecked(true);setReadOnlyDropDate(false);setTripType(e.target.value);}}/>
-                                                   <label>Round Way</label>
+                                                        <select class="form-select" name="n_tripType" value={tripType} onChange={(e)=>{setTripType(e.target.value);}} >
+                                                             <option value="oneWay">One Way</option>
+                                                             <option value="roundWay">Round Way</option>
+                                                        </select>
                                               </div>
                                               <span className="small text-danger">{tripTypeMsg}</span>
                                               <div className="form-group">
@@ -165,10 +166,10 @@ function ShowCabData(){
                                               </div>
                                               <span className="small text-danger">{pickupDateMsg}</span>
                                               <div className="form-group">
-                                                   <label>Drop Date&#42;</label>
-                                                   <input className="form-group" type="date" name="n_dropDate" value={dropDate} readOnly={readOnlyDropDate} onChange={(e)=>{setDropDate(e.target.value);}}/>
+                                                   <label>Return Date&#42;</label>
+                                                   <input className="form-group" type="date" name="n_returnDate" value={returnDate} readOnly={readOnlyReturnDate} onChange={(e)=>{setReturnDate(e.target.value);}}/>
                                               </div>
-                                              <span className="small text-danger">{dropDateMsg}</span>
+                                              <span className="small text-danger">{returnDateMsg}</span>
                                               <div className="form-group">
                                                    <label>Pickup Time</label>
                                                    <input className="form-group" type="text" name="n_pickupTime" value={pickupTime} placeholder="For Example:7.30 AM....." onChange={(e)=>{setPickupTime(e.target.value);}}/>

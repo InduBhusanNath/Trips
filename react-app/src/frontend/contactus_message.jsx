@@ -44,6 +44,10 @@ function ProspectMessage(){
          })
          .then(response=>{
              setMs1(response.data);
+             setName('');
+             setContactNo('');
+             setEmail('');
+             setMessage('');
              return;
          })
          .catch(error=>{

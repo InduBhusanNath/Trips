@@ -6,7 +6,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/mydb');
          tripRequestDate:String,
          tripType:String,
          tripPickupDate:String,
-         tripDropDate:String,
+         tripReturnDate:String,
          tripPickupTime:String,
          tripPickupAddress:String,
          tripDropAddress:String,
