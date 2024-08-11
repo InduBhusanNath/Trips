@@ -11,6 +11,7 @@ export default function GuwahatiTaxi(){
                      <BreadCrumb/>
                      <Body1/>
                      <Body2/>
+                     <Body3/>                 
                      <Footer/>
                 </div>
      </>);
@@ -95,5 +96,110 @@ function Body2(){
 
                 </div>
       
+      </>);
+}
+//Body3
+function Body3(){
+      return(<>
+                <div className="row background-lemonchiffon">
+                          <div className="col-sm-1"></div>
+                          <div className="col-sm-10 p-3">
+                                    <h2>Excellent Cab Service in Guwahati for Local Trips</h2>
+                                    <section className="font font22">
+                                         <p>
+                                            We provide cabs to any place to visit in Guwahati. With many tourist places in Guwahati, foreigners and visitors from different places in India can get many options. They can undergo the best sightseeing experience by hiring our dedicated cab service in Guwahati. With our comprehensive knowledge of the available Guwahati tour places, we can ensure customers a rich Guwahati tourism experience.
+                                         </p>
+                                         <p>
+                                            Ancient temples, stunning river beaches, parks, waterfalls, a planetarium, a science museum, and an art museum are the attractive Guwahati tourist places.
+                                         </p>
+                                    </section>
+                                    <section className="font font22">
+                                         <h3>Umananda-the Smallest Island in the World</h3>                                     
+                                         <p>
+                                            The Umananda island is one of the best places to visit in Guwahati. Notably, it is the smallest river island in the world. Umananda is also a key component of Guwahati tourism.
+                                         </p>
+                                         <p>
+                                            The island stands on the river Brahmaputra, flowing across the city. Being the smallest island does not mean it is devoid of human activities. Instead, Umananda attracts foreign tourists and other people. As such, it receives significant footfalls regularly.
+                                         </p>
+                                         <p>
+                                            There is an ancient Shiva temple on the island. Numerous devotees come to the temple to offer their prayers regularly.
+                                         </p>
+                                         <p>
+                                           In addition, the surroundings all around Umananda are majestic. The beautiful view of the Brahmaputra river, with both banks and the city as the background, provides a mesmerizing sight that can remain in memory forever. Also, the peaceful atmosphere could bring calmness to the mind.
+                                         </p>
+                                         <p>
+                                           Reaching Umananda can be quick and convenient by hiring a Guwahati taxi service. After deboarding from the taxi, visitors should board a ferry at the river bank to reach the island shortly.
+                                         </p>
+                                         <p>
+                                           Ferries run at frequent intervals, providing seamless connectivity between the island and the river bank. Interestingly, the ferry travel can be another exciting experience. With the island in sight, the flowing river, and the natural beauty around, the experience can be unforgettable.
+                                         </p>
+                                         <h3>Nilachal Hill-- the Abode of the Kamakhya Temple</h3>
+                                         <p>
+                                            A fusion of natural beauty and spirituality attracts people from various parts of the world to the Nilachal Hills. The hills stand on the south bank of the river Brahmaputra.
+                                         </p>
+                                         <p>
+                                           The fame of Nilachal Hills in Guwahati has spread globally due to the abode of the famous Kamakhya temple being on the hills.
+                                         </p>
+                                         <p>
+                                           People from different parts of India and overseas countries regularly visit the temple. The presence of people from various places also creates vibrancy around.
+                                         </p>
+                                         <p>
+                                           The best option to reach the temple is to rent a Guwahati taxi. The ride from the foothill to the temple can be an exciting experience. The natural beauty and serenity of the entire Nilachal hills make it an attractive place to visit in Guwahati.
+                                         </p>
+                                         <h3>Srimanta Sankardev Kalakshetra—the Cultural Hub</h3>
+                                         <p>
+                                            Visiting the Srimanta Sankardev Kalakshetra in Guwahati can be educative and exciting. It is a cultural institution that gives insights into the cultural heritage of Assam. In addition, other educative aspects of the institution make it an exciting place to visit in Guwahati.
+                                         </p>
+                                         <p>
+                                            Srimanta Sankardev Kalakshetra consists of a cultural museum, a park, a library, restaurants, and a theatre.
+                                         </p>
+                                         <p>
+                                            Due to the widespread popularity of the cultural institution, it has become one of the most visited Guwahati tourist places.
+                                         </p>
+                                         <p>
+                                            Visitors can avail of a Guwahati cab service to reach the cultural institution.
+                                         </p>
+                                         <h2>North Bank of River Brahmaputra—the Land of Ancient Temples</h2>
+                                         <p>
+                                           The city’s part on the north bank of the river Brahmaputra is popularly known as North Guwahati. It is different from the rest of Guwahati due to the calm atmosphere.
+                                         </p>
+                                         <p>
+                                           In North Guwahati, there can be many things to do. The options include sightseeing, engaging in spirituality, and picnicking. Due to the broad range of activity options, North Guwahati is one of the best places to visit in Guwahati.
+                                         </p>
+                                         <p>
+                                            Centuries-old temples can give a glimpse of the richness of construction technology during the ancient days.
+                                         </p>
+                                         <p>
+                                           Temples in North Guwahati were built by kings who ruled during the 17th and 18th centuries. That means the temples are more than three hundred years old.
+                                         </p>
+                                         <p>
+                                           Interestingly, the temples appear in good condition despite being that old. And that speaks of the advanced construction technology in the past centuries.
+                                         </p>
+                                         <p>
+                                           A visit to the temples can arouse spirituality apart from getting insights into the rich construction methodologies of the past. Also, visitors can spend time in a peaceful atmosphere to diminish stress.
+                                         </p>
+                                         <p>
+                                           An eye-catching waterfall in North Guwahati can arouse excitement. That can also prompt visitors to sit and relax while immersing themselves in the vibrancy of nature.
+                                         </p>
+                                         <p>
+                                           There are green areas and beautiful river banks to explore. These places are also popular picnic spots.
+                                         </p>
+                                         <p>
+                                           Availing of a taxi service in Guwahati is a quick option to reach North Guwahati from the other bank. During the taxi travel, you will get the opportunity to cross the spectacular Brahmaputra river over the iconic Saraighat bridge. 
+                                         </p>
+                                         <p>
+                                            In addition to taxis, there are other exciting options to reach North Guwahati. 
+                                         </p>
+                                         <p>
+                                            Ferries run to and from North Guwahati at frequent intervals. That can be an exciting experience due to the sight of the banks and the river. 
+                                         </p>
+                                         <p>
+                                            Besides, the ropeway can be another exciting option for commuting to and from North Guwahati. 
+                                         </p>
+                                    </section>
+
+                          </div>
+                          <div className="col-sm-1"></div>
+                </div>          
       </>);
 }
