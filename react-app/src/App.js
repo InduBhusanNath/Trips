@@ -12,6 +12,10 @@ import DelhiTaxi from "./frontend/delhi-taxi";
 import GuwahatiTaxi from "./frontend/guwahati-taxi";
 import BlogPage from "./frontend/blog-page";
 import ContactUs from "./frontend/contactus";
+import AdventureTourism from "./frontend/adventure-tourism";
+import EcoTourism from "./frontend/eco-tourism";
+import UniqueAttractions from "./frontend/unique-attractions";
+import UniqueAttractionsAssam from "./frontend/unique-attractions-assam";
 
 import AdminLogin from "./backend/admin_login";
 import AdminDashboard from "./backend/admin_dashboard";
@@ -52,9 +56,27 @@ const router=createBrowserRouter([
    element:<ContactUs/>
   },
   {
+   path:"/adventure-tourism",
+   element:<AdventureTourism/>
+  },
+  {
+   path:"/eco-tourism",
+   element:<EcoTourism/>
+  },
+  {
      path:"/adminLogin",
      element:<AdminLogin/>
-  },  
+  }, 
+  {
+   path:"/unique-attractions",
+   element:<UniqueAttractions/>,
+   children:[
+          {
+                path:"/unique-attractions/unique-attractions-assam",
+                element:<UniqueAttractionsAssam/>
+          },
+   ],
+   },  
   {
     path: "/adminDashboard",
     element: <AdminDashboard/>,

@@ -37,6 +37,13 @@ function Nav(){
                              <li><Link to="/guwahati-taxi" className="text-decoration-none text-dark">Guwahati</Link></li>
                          </ul>
                   </li>
+                  <li>Tourism&#9662;
+                         <ul>
+                             <li><Link to="/adventure-tourism" className="text-decoration-none text-dark">Adventure</Link></li>
+                             <li><Link to="/eco-tourism" className="text-decoration-none text-dark">Eco</Link></li>
+                         </ul>
+                  </li>
+                  <li><Link to="/unique-attractions" className="text-decoration-none text-dark">Unique Attractions</Link></li>
                   <li><Link to="/blog-page" className="text-decoration-none text-dark">Blogs</Link></li>
                   <li><Link to="/contactus" className="text-decoration-none text-dark">Contact Us</Link></li>
               </ul>
