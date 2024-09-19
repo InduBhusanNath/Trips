@@ -60,10 +60,10 @@ function Foot(){
                          <section>
                                  <p className="font font24 fw-bold">QUICK CONNECT</p>
                                  
-                                 <p>&#128241;<br/>
+                                 <p>&#128241;&nbsp;
                                          (+91)8638576314
                                  </p>
-                                 <p>&#128231;<br/>
+                                 <p>&#128231;&nbsp;
                                          info.aeiety@gmail.com
                                  </p>
                                  

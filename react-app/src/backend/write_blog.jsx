@@ -117,7 +117,7 @@ export default function WriteBlog(){
 
                          </div>                         
                          <div className="form-group">
-                            <input type="text" className="form-control" name="n_blogDate" value={blogDate}/>
+                            <input type="date" className="form-control" name="n_blogDate" value={blogDate}/>
                          </div>
                          <br/>
                          <div className="form-group">

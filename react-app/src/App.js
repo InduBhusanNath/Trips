@@ -14,6 +14,7 @@ import BlogPage from "./frontend/blog-page";
 import ContactUs from "./frontend/contactus";
 import AdventureTourism from "./frontend/adventure-tourism";
 import EcoTourism from "./frontend/eco-tourism";
+import RelicTourism from "./frontend/relic-tourism";
 import UniqueAttractions from "./frontend/unique-attractions";
 import UniqueAttractionsAssam from "./frontend/unique-attractions-assam";
 
@@ -28,6 +29,10 @@ import ContactUsMessage from "./frontend/contactus_message";
 import MessagesContactUs from "./backend/contactus_messages";
 import ManageCabBooking from "./backend/manage-cab-booking";
 import CabBookingProcessing from "./backend/cab-booking-processing";
+import Tourism from "./backend/tourism";
+import TourismWrite from "./backend/tourism-write";
+import TourismEdit from "./backend/tourism-edit";
+import TourismDelete from "./backend/tourism-delete";
 
 
 const router=createBrowserRouter([
@@ -62,6 +67,10 @@ const router=createBrowserRouter([
   {
    path:"/eco-tourism",
    element:<EcoTourism/>
+  },
+  {
+   path:"/relic-tourism",
+   element:<RelicTourism/>
   },
   {
      path:"/adminLogin",
@@ -123,7 +132,27 @@ const router=createBrowserRouter([
     {
      path:"/forgotPassword",
      element:<ForgotPassword/>
-   }
+   },
+   {
+      path:"/adminDashboard/tourism",
+      element:<Tourism/>
+
+    },
+    {
+      path:"/adminDashboard/tourism/tourism-write",
+      element:<TourismWrite/>
+
+    },
+    {
+      path:"/adminDashboard/tourism/tourism-edit",
+      element:<TourismEdit/>
+
+    },
+    {
+      path:"/adminDashboard/tourism/tourism-delete",
+      element:<TourismDelete/>
+
+    },
    
 ]);
 

@@ -7,6 +7,7 @@ import {faHouse} from '@fortawesome/free-solid-svg-icons';
 import {faBlog} from '@fortawesome/free-solid-svg-icons';
 import {faEnvelopesBulk} from '@fortawesome/free-solid-svg-icons';
 import {faTaxi} from '@fortawesome/free-solid-svg-icons';
+import {faPersonWalkingLuggage} from '@fortawesome/free-solid-svg-icons';
 
 
 import React from 'react';  
@@ -32,7 +33,7 @@ function TechnicalSeo(){
         const [togle,setTogle]=useState('+');
         const [display,setDisplay]=useState('hidden')
         function Settings(){
-            if(togle=='+'){
+            if(togle==='+'){
                 setTogle('-');
                 setDisplay('visible');
             }else{
@@ -55,6 +56,9 @@ function TechnicalSeo(){
                     </tr>
                     <tr>
                          <td className="bg-transparent"><FontAwesomeIcon icon={faEnvelopesBulk}/>&nbsp;<Link to="/adminDashboard/contactus-messages/" className="action">Contact Us Messages</Link></td> 
+                    </tr>
+                    <tr>
+                         <td className="bg-transparent"><FontAwesomeIcon icon={faPersonWalkingLuggage}/>&nbsp;<Link to="/adminDashboard/tourism/" className="action">Tourism</Link></td> 
                     </tr>
                 </tbody>
                 <button className="collapse_button w-75" onClick={Settings}><FontAwesomeIcon icon={faGear}/>&nbsp;Settings</button><span className="text-end w-25">{togle}</span>
@@ -99,15 +103,18 @@ function AdmBody(){
      axios.get("/admin_session")
      .then(response=>{        
          var sesData=response.data;
-         sesData.map((ses)=>{
-            setSessionUsername(ses.username);
-            setSessionName(ses.name);
-            setSessionDesignation(ses.designation);
-            setSessionAdminStatus(ses.adminStatus);
-            setSessionAddress(ses.address);            
-         }
-            
+         var listSesData=sesData.map((ses)=>{
+                 
+                 setSessionUsername(ses.username);
+                 setSessionName(ses.name);
+                 setSessionDesignation(ses.designation);
+                 setSessionAdminStatus(ses.adminStatus);
+                 setSessionAddress(ses.address);            
+                 }                  
          );
+         return({listSesData});
+
+           
      })
      .catch(error=>{
         alert(error);
@@ -124,7 +131,7 @@ function AdmBody(){
      }
      {/*Display Change Password Form*/}
       function ShowHideChangePassword(){
-          if(displayChangePasswordForm=='hidden'){
+          if(displayChangePasswordForm==='hidden'){
               setDisplayChangePasswordForm('shown');
           }else{
               setDisplayChangePasswordForm('hidden');
@@ -175,12 +182,12 @@ function AdmBody(){
                        axios.get("admin_logout")
                        .then(response=>{
                         var admLogOutRes=response.data;
-                        if(admLogOutRes=='1'){
+                        if(admLogOutRes==='1'){
                              setTimeout(()=>{
                                 window.location.assign("adminLogin");
                              },1000);
                              return;
-                        }else if(admLogOutRes=="-1"){
+                        }else if(admLogOutRes==="-1"){
                             setAdmLogOutRes("Could Not Log Out, Please Try Again.....");
                              return;
                         }

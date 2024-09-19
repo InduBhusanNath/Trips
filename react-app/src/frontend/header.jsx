@@ -1,9 +1,33 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function Header(){
-     return(<>         
-         <HeaderBar/>       
+     return(<>   
+           <PreHeaderBar/>      
+           <HeaderBar/>       
      </>);
+}
+function PreHeaderBar(){
+      return(<>
+                <div className="row padding0 background-blanchedalmond">
+                     <div className="col-sm-7">
+                          <section className="font font14 padding5 align-middle">
+                              &nbsp;Customer Centricity&nbsp;&#124;&nbsp;Excellence&nbsp;&#124;Trust&nbsp;:&nbsp;Our Principal Pillars
+                          </section>
+                     </div>
+                     <div className="col-sm-5">
+                          <nav className="font font14 text-center d-none d-sm-none d-md-none d-lg-block">
+                               <ul>
+                                    <li><Link to="/" className="text-decoration-none text-dark">HOME</Link></li>
+                                    <li><Link to="/aboutus" className="text-decoration-none text-dark">About Us</Link></li>
+                                    <li><Link to="/blog-page" className="text-decoration-none text-dark">Blogs</Link></li>
+                                    <li><Link to="/contactus" className="text-decoration-none text-dark">Contact Us</Link></li>
+                               </ul>
+                          </nav>
+                     </div> 
+
+                </div>
+          </>);
+      
 }
 function HeaderBar(){
      return(<>
@@ -29,23 +53,23 @@ function Nav(){
      return(<>
           <nav className="font font20 text-center d-none d-sm-none d-md-none d-lg-block">
               <ul>
-                  <li><Link to="/" className="text-decoration-none text-dark">HOME</Link></li>
-                  <li><Link to="/aboutus" className="text-decoration-none text-dark">About Us</Link></li>
+                  
                   <li>Cab Services&#9662;
                          <ul>
-                             <li><Link to="/delhi-taxi" className="text-decoration-none text-dark">Delhi</Link></li>
-                             <li><Link to="/guwahati-taxi" className="text-decoration-none text-dark">Guwahati</Link></li>
+                             <li><Link to="/delhi-taxi" className="text-decoration-none text-dark padding25">Delhi</Link></li>
+                             <li><Link to="/guwahati-taxi" className="text-decoration-none text-dark padding25">Guwahati</Link></li>
+
                          </ul>
                   </li>
                   <li>Tourism&#9662;
                          <ul>
                              <li><Link to="/adventure-tourism" className="text-decoration-none text-dark">Adventure</Link></li>
                              <li><Link to="/eco-tourism" className="text-decoration-none text-dark">Eco</Link></li>
+                             <li><Link to="/relic-tourism" className="text-decoration-none text-dark">Relic</Link></li>
                          </ul>
                   </li>
                   <li><Link to="/unique-attractions" className="text-decoration-none text-dark">Unique Attractions</Link></li>
-                  <li><Link to="/blog-page" className="text-decoration-none text-dark">Blogs</Link></li>
-                  <li><Link to="/contactus" className="text-decoration-none text-dark">Contact Us</Link></li>
+                  
               </ul>
           </nav>
      </>);
