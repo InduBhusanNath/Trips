@@ -4,6 +4,7 @@ import CabBooking from "./cab_booking";
 import {Helmet} from "react-helmet";
 import Collapsible from 'react-collapsible';
 
+
 export default function HomePage(){
      return(<>
            <TechnicalSEO/>
@@ -21,11 +22,13 @@ function TechnicalSEO(){
              
              <Helmet>
                 <meta charSet="utf-8"/>
-                <title>Taxi Services| Experience Reliability, Timeliness, Fair Fare</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-                <meta name="description" content="Experience excellent taxi services with reasonable fares, high safety, timeliness, and customer-centricity. Our focus on the customer serves you excellence."/>
-                <meta property="og:title" content="MyApp" />
-                <meta property="og:image" content="path/to/image.jpg" />
+                <title>Taxi Service: Book Affordable, Reliable, Secure, Timely Cabs</title>                
+                <meta name="description" content="Are you searching for a trusted taxi service for cab booking? Book taxi from us for all trips at affordable fares. We ensure reliability, safety, timeliness."/>
+                <meta property="og:title" content="Experience Best Cab Services and Trips" />
+                <meta property="og:image" content="%PUBLIC_URL%/MainImages/logo.png"/>
+                <meta property="og:description" content="We are a trusted provider of excellent cab services and tours." />
+                <meta property="og:url" content="https://aeiety.com" />
+                <link rel="canonical" href="https://aeiety.com"/>
             </Helmet>
      
      </>);
@@ -36,7 +39,7 @@ function Banner(){
            <div className="row">
                 <div className="col-sm-12 p-0 m-0">
                      <section className="w-100">
-                          <img src="./MainImages/Hptaxi.PNG" alt="AeietyTrips" className="img-fluid w-100"/>
+                          <img src="%PUBLIC_URL%/MainImages/Hptaxi.png" alt="Taxi Services" className="img-fluid w-100"/>
                      </section>
                      
                 </div>

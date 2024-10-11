@@ -60,6 +60,9 @@ function TechnicalSeo(){
                     <tr>
                          <td className="bg-transparent"><FontAwesomeIcon icon={faPersonWalkingLuggage}/>&nbsp;<Link to="/adminDashboard/tourism/" className="action">Tourism</Link></td> 
                     </tr>
+                    <tr>
+                         <td className="bg-transparent">&#128506;&nbsp;<Link to="/adminDashboard/places/" className="action">Places</Link></td> 
+                    </tr>
                 </tbody>
                 <button className="collapse_button w-75" onClick={Settings}><FontAwesomeIcon icon={faGear}/>&nbsp;Settings</button><span className="text-end w-25">{togle}</span>
                      <section className={display}>

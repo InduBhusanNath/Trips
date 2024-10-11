@@ -33,6 +33,10 @@ import Tourism from "./backend/tourism";
 import TourismWrite from "./backend/tourism-write";
 import TourismEdit from "./backend/tourism-edit";
 import TourismDelete from "./backend/tourism-delete";
+import Places from "./backend/places";
+import PlaceWrite from "./backend/places-write";
+import PlaceEdit from "./backend/place-edit";
+import PlaceDelete from "./backend/place-delete";
 
 
 const router=createBrowserRouter([
@@ -111,7 +115,25 @@ const router=createBrowserRouter([
          path:"/adminDashboard/contactus-messages/",
          element:<MessagesContactUs/>
 
-      }
+      },
+      {  
+        path:"/adminDashboard/places/",
+        element:<Places/>
+
+     },
+     {  
+      path:"/adminDashboard/places/place-write",
+      element:<PlaceWrite/>
+    },
+    {  
+      path:"/adminDashboard/places/place-edit",
+      element:<PlaceEdit/>
+    },
+    {  
+      path:"/adminDashboard/places/place-delete",
+      element:<PlaceDelete/>
+    }
+
       
 
     ]

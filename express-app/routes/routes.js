@@ -1,10 +1,16 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 const session=require('express-session');
+const path = require('path');
 var app = express();
+
 app.use(express.static('public'));
+var filePath=path.join(__dirname,'../../','react-app','build','index.html');
+app.use(express.static(filePath));
 
 
+
+console.log(filePath)
  
 
 //var router = express.Router();
@@ -32,13 +38,11 @@ var contactUsMessageModel=require('../controllers/contactUsMessageController.js'
 var autoCreateAdminController=require('../controllers/autoCreateAdminController.js');
 var cabBookingController=require('../controllers/cabBookingController.js');
 var tourismController=require('../controllers/tourismController.js');
+var placesController=require('../controllers/placesController.js');
 
 /* GET*/
-app.get('/test', function(req, res) {
-  
-  console.log("test");
-   
-});
+
+
 app.get('/adminLogin/create-auto-admin',autoCreateAdminController.createautoAdmin);
 app.get('/adminDashboard/adminUsers',userController.readUsers);
 app.get('/admin_session',sessionController.adminSession);
@@ -50,6 +54,8 @@ app.get('/adminDashboard/cab-booking-data/',cabBookingController.readCabBooking)
 app.get('/adminDashboard/manage-cab-booking/cab-booking-processing/get-cab-client-data/',cabBookingController.clientCabBooking);
 app.get('/adminDashboard/tourism',tourismController.tourismDetailsRead);
 app.get('/adminDashboard/tourism/tourism-edit',tourismController.tourismDetailsEdit);
+app.get('/adminDashboard/places',placesController.placeRead);
+app.get('/adminDashboard/places/place-edit',placesController.placeEdit);
 
 
     
@@ -80,6 +86,9 @@ app.post('/delete-cab-booking-data/',cabBookingController.deleteCabBookingData);
 app.post('/create-tourism-details/',tourismController.tourismDetailsWrite);
 app.post('/adminDashboard/tourism/tourism-update',tourismController.tourismDetailsUpdate);
 app.post('/adminDashboard/tourism/tourism-delete',tourismController.tourismDetailsDelete);
+app.post('/adminDashboard/places/place-write',placesController.placeWrite);
+app.post('/adminDashboard/places/place-edit',placesController.placeUpdate);
+app.post('/adminDashboard/places/place-delete',placesController.placeDelete);
 
 
 
