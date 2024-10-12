@@ -46,7 +46,7 @@ function HeaderBar(){
 function Logo(){
      return(<>
            <section className="text-center padding10">
-                <Link to="/" className="text-decoration-none"><img src="./MainImages/logo.png" className="img-fluid w-75" alt="AeietyTrips"/></Link>
+                <Link to="/" className="text-decoration-none"><img src={process.env.PUBLIC_URL + 'MainImages/logo.png'} className="img-fluid w-75" alt="AeietyTrips"/></Link>
                 
           </section>
      </>);
@@ -103,7 +103,7 @@ function RequestAQuote(){
 function Whatsapp(){
            return(<>
                <section className="text-center">
-                     <a aria-label="Message AeietyTrips" href="https://wa.me/9184368576314?text=I'Please%20get20back%20to%20me%20for%20cab%20booking" className="whatsapp"> <img alt="AeietyTrips" src="./MainImages/whatsapp.png"/></a>
+                     <a aria-label="Message AeietyTrips" href="https://wa.me/9184368576314?text=I'Please%20get20back%20to%20me%20for%20cab%20booking" className="whatsapp"> <img alt="AeietyTrips" src={process.env.PUBLIC_URL + 'MainImages/whatsapp.png'}/></a>
                </section>           
            </>);  
 }

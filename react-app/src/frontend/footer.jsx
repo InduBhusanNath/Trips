@@ -13,10 +13,10 @@ export default function Footer(){
 }
 function Foot(){
      return(<>
-         <row className="row background-bisque padding25">
+         <row className="row background-peachpuff padding25">
                  <div className="col-sm-3">
                          <section className="padding10 text-center">
-                                 <Link to="/" className="text-decoration-none"><img src="./MainImages/logo.png" className="img-fluid w-50" alt="AeietyTrips"/></Link>
+                                 <Link to="/" className="text-decoration-none"><img src={process.env.PUBLIC_URL + 'MainImages/logo.png'} className="img-fluid w-50" alt="AeietyTrips"/></Link>
                                  
                          </section>
                          <section className="padding10 text-center">
@@ -35,9 +35,9 @@ function Foot(){
                  </div>
                  <div className="col-sm-3">
                          <section>
-                             <p className="font font24 fw-bold">KNOW AeietyTrips</p>
+                             <p className="font font24 fw-bold">Know Us</p>
                              <p className="font font20">
-                             AeietyTrips is a trusted cab service provider with the principal aim of providing the best experience to customers. Customer-centricity is the governing principle of everything we do. 
+                             Aeiety Trips is a trusted cab service provider and excellent trip operator. Its principal aim is to provide the best experience to customers. <br/>Customer-centricity is the governing principle of everything we do. 
 
                              </p>
 
@@ -45,7 +45,7 @@ function Foot(){
                  </div>
                  <div className="col-sm-3">
                          <section>
-                             <p className="font font24 fw-bold">USEFUL LINKS</p>
+                             <p className="font font24 fw-bold">Useful Links</p>
                                                  &#10132;&nbsp;<Link to="/" className="text-decoration-none text-dark">HOME</Link>
                                                  <br/>
                                                  &#10132;&nbsp;<Link to="/aboutus" className="text-decoration-none text-dark">About Us</Link>
@@ -58,13 +58,13 @@ function Foot(){
                  </div>
                  <div className="col-sm-3">
                          <section>
-                                 <p className="font font24 fw-bold">QUICK CONNECT</p>
+                                 <p className="font font24 fw-bold">Quick Connect</p>
                                  
                                  <p>&#128241;&nbsp;
                                          (+91)8638576314
                                  </p>
                                  <p>&#128231;&nbsp;
-                                         info.aeiety@gmail.com
+                                         aeiety.trips@gmail.com
                                  </p>
                                  
                          </section>
@@ -75,7 +75,7 @@ function Foot(){
 {/*Copyright*/}
 function CopyRight(){
          return(<>
-                 <div className="row background-bisque border-top border-dark">
+                 <div className="row background-bisque">
                          <div className="col-sm-4"></div>
                          <div className="col-sm-4">
                                  <section className="font font12">
