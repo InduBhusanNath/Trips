@@ -17,7 +17,7 @@ nav ul li ul{
 }
 nav ul li ul li{
      display: block; 
-     padding:5px;    
+     padding:20px;    
 }
 nav ul li:hover ul{
      display:block;     
