@@ -18,7 +18,7 @@ function PreHeaderBar(){
                      <div className="col-sm-5 text-center">
                           <nav className="font font18 text-center d-none d-sm-none d-md-none d-lg-block">
                                <ul>
-                                    
+                                    <li><Link to="/" className="text-decoration-none text-dark">&#x1F3E0;HOME</Link></li>
                                     <li><Link to="/aboutus" className="text-decoration-none text-dark">About Us</Link></li>
                                     <li><Link to="/contactus" className="text-decoration-none text-dark">Contact Us</Link></li>
                                     <li><Link to="/blog-page" className="text-decoration-none text-dark">Blogs</Link></li>
@@ -37,7 +37,7 @@ function HeaderBar(){
            <div className="row padding10 background-blanchedalmond">                 
                  <div className="col-sm-2"><Logo/></div>  
                  <div className="col-sm-7"><Nav/></div>
-                 <div className="col-sm-2"></div>
+                 <div className="col-sm-2"><RequestAQuote/></div>
                  <div className="col-sm-1"><Whatsapp/></div>
           </div>
      </>);
@@ -55,15 +55,15 @@ function Nav(){
      return(<>
           <nav className="font font20 text-center d-none d-sm-none d-md-none d-lg-block">
               <ul>
-                  <li><Link to="/" className="text-decoration-none text-dark">HOME</Link></li>
-                  <li>Taxi&#9662;
+                  <li><Link to="/" className="text-decoration-none text-dark">&#x1F3E0;HOME</Link></li>
+                  <li>&#128661;&nbsp;Taxi&#9662;
                          <ul>
                              <li><Link to="/delhi-taxi" className="text-decoration-none text-dark">Delhi</Link></li>
                              <li><Link to="/guwahati-taxi" className="text-decoration-none text-dark">Guwahati</Link></li>
 
                          </ul>
                   </li>
-                  <li>Tourism&#9662;
+                  <li>&#9978;&nbsp;Tourism&#9662;
                          <ul>
                                
                                <li><Link to="/adventure-tourism" className="text-decoration-none text-dark">Adventure</Link></li>
@@ -71,8 +71,8 @@ function Nav(){
                                <li><Link to="/relic-tourism" className="text-decoration-none text-dark">Historical</Link></li>
                          </ul>
                   </li>
-                  <li><Link to="/#" className="text-decoration-none text-dark">Tour Packages</Link></li>
-                  <li><Link to="/#" className="text-decoration-none text-dark">Cruises</Link></li>
+                  <li><Link to="/#" className="text-decoration-none text-dark">&#128506;&nbsp;Tour Packages</Link></li>
+                  <li><Link to="/#" className="text-decoration-none text-dark">&#128674;&nbsp;Cruises</Link></li>
                   
               </ul>
           </nav>
@@ -91,6 +91,14 @@ function HelpLine(){
          
     
     </>);
+}
+
+function RequestAQuote(){
+      return(<>
+           <section className="bg-warning rounded-pill font font20 text-center padding10 shadow">            
+           <Link to="/contactus" className="text-decoration-none text-dark">Request a Quote</Link>
+           </section>
+      </>);
 }
 function Whatsapp(){
            return(<>
