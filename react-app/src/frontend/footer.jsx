@@ -37,7 +37,7 @@ function Foot(){
                          <section>
                              <p className="font font24 fw-bold">Know Us</p>
                              <p className="font font20">
-                             Aeiety Trips is a trusted cab service provider and excellent trip operator. Its principal aim is to provide the best experience to customers. <br/>Customer-centricity is the governing principle of everything we do. 
+                             Aeiety Trips is a trusted cab service provider and excellent tour operator. Its principal aim is to provide the best experience to customers. <br/>Customer-centricity is the governing principle of everything we do. 
 
                              </p>
 
