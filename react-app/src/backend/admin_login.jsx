@@ -8,9 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 
 
- 
-
-
 export default function AdminLogin(){
     const [adminEmail,setAdminEmail]=useState("");
     const [errorAdminEmail, setErrorAdminEmail]=useState("");
@@ -26,20 +23,7 @@ export default function AdminLogin(){
    
     
 
-    function GetAutoAdmin(){      
-              useEffect(()=>{
-                 axios.get("/adminLogin/create-auto-admin")
-                 .then(response=>{
-                    alert(response);
-                 })
-                 .catch(error=>{
-                    alert(error);
-                 })
-
-              },[]);
-        
-             
-     }
+    
     
  
      
@@ -139,8 +123,7 @@ export default function AdminLogin(){
                  {/*Header*/}
                  <div className="row">
                      <div className="col-sm-4">
-                        {/* Create Dummy User for First Login*/}
-                        <button className="button" onClick={GetAutoAdmin}>Create Dummy Admin User</button>
+                          <CreateDummyUser/>
                      </div>
                      <div className="col-sm-4">
                          <p>&nbsp;</p>
@@ -166,7 +149,7 @@ export default function AdminLogin(){
 
                              <p>&nbsp;</p>
                              <span className="text-danger small padding10">{res}</span>
-                             <form onSubmit={HandleSubmit}>
+                             <form method="post" onSubmit={HandleSubmit}>
                                  <div className="form-group">                        
                                      <label>EMail</label>
                                      <input type="email" className="form-control" name="n_adminEmail" value={adminEmail} onChange={(e)=>{setAdminEmail(e.target.value)}}/>
@@ -175,7 +158,7 @@ export default function AdminLogin(){
                                  <br/>
                                  <div className="form-group">
                                      <label>Password</label>                               
-                                     <input type={passwordType} className="form-control" name="n_adminPassword" value={adminPassword} onChange={(e)=>{setAdminPassword(e.target.value)}}/>
+                                     <input type="password" className="form-control" name="n_adminPassword" value={adminPassword} onChange={(e)=>{setAdminPassword(e.target.value)}}/>
                                      <span className="text-danger small">{errorAdminPassword}</span>
                                  </div>
                                  <div className="form-check">
@@ -203,4 +186,38 @@ export default function AdminLogin(){
             </div>
          </>
      );
+}
+
+
+   
+
+
+{/* Create Dummy User for First Login*/}
+function CreateDummyUser(){ 
+     const[autoUser]=useState('1');
+      var usr={
+         "flag":autoUser
+      }
+      function HandleAutoUser(e){  
+         e.preventDefault();    
+         axios.post("/adminLogin/create-auto-admin",usr)
+         .then(response=>{
+            alert(response.data)
+         })
+         .catch(error=>{
+            alert(error);
+         });       
+      
+      }
+
+     
+     return(<>
+         <form method="post" onSubmit={HandleAutoUser}>
+             <input type="hidden" className="form-control" name="n_autoUser" value={autoUser}/>
+             <button className="button">Create Dummy Admin User</button>
+         </form>
+         
+     </>);
+    
+
 }

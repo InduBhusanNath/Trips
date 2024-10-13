@@ -43,7 +43,7 @@ app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname,'../','../','react-app','build','index.html'));
 });
 
-app.get('/adminLogin/create-auto-admin',autoCreateAdminController.createautoAdmin);
+
 app.get('/adminDashboard/adminUsers',userController.readUsers);
 app.get('/admin_session',sessionController.adminSession);
 app.get('/admin_logout',sessionController.adminLogOut);
@@ -62,6 +62,7 @@ app.get('/adminDashboard/places/place-edit',placesController.placeEdit);
 
 
 /*POST*/
+app.post('/adminLogin/create-auto-admin',autoCreateAdminController.createautoAdmin);
 app.post('/adminDashboard/adminUsers/user_post',userController.createUser);
 app.post('/adminDashboard/adminUsers/user_edit_data',userController.editUsersData);
 app.post('/adminDashboard/adminUsers/user_edit',userController.editUsers); 
