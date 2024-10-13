@@ -7,7 +7,7 @@ const saltRounds = 10;
 //Create Auto Admin
 
 function createautoAdmin(req,res){
-     var bdy=req.body; console.log(bdy)
+     var bdy=req.body; console.log("hi")
      var pwd='abc123';
      const salt = bcrypt.genSaltSync(saltRounds);
      const saved_pwd=bcrypt.hashSync(pwd,salt);

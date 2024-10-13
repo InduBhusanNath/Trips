@@ -11,7 +11,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
  
 
 
-export default function AdminLogin(t){
+export default function AdminLogin(){
     const [adminEmail,setAdminEmail]=useState("");
     const [errorAdminEmail, setErrorAdminEmail]=useState("");
     const [adminPassword,setAdminPassword]=useState("");

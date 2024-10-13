@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 
+
 function createUser(req,res){
     var originalPwd=req.body.n_password;
     const salt = bcrypt.genSaltSync(saltRounds);
