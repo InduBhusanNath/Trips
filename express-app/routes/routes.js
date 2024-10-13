@@ -8,14 +8,7 @@ app.use(express.static('public'));
 app.use(express.static(path.join(__dirname,'../','../','react-app','build')));
 
 
-console.log(path.join(__dirname,'../','../','react-app','build'))
 
-
-
-
-app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname,'../','../','react-app','build','index.html'));
-  });
  
 
 //var router = express.Router();
@@ -46,7 +39,9 @@ var tourismController=require('../controllers/tourismController.js');
 var placesController=require('../controllers/placesController.js');
 
 /* GET*/
-
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname,'../','../','react-app','build','index.html'));
+});
 
 app.get('/adminLogin/create-auto-admin',autoCreateAdminController.createautoAdmin);
 app.get('/adminDashboard/adminUsers',userController.readUsers);
