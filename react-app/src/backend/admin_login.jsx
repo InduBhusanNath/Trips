@@ -26,14 +26,19 @@ export default function AdminLogin(){
    
     
 
-    function getAutoAdmin(){        
-             let xhr=new XMLHttpRequest();
-             xhr.open('GET',"/adminLogin/create-auto-admin",true);
-             xhr.send();
-             xhr.onload=()=>{ 
-                             var m=parse(xhr.response);
-                             setAutousr(m);
-                        }
+    function getAutoAdmin(){      
+              useEffect(()=>{
+                 axios.get("/adminLogin/create-auto-admin")
+                 .then(response=>{
+                    alert(response);
+                 })
+                 .catch(error=>{
+                    alert(error);
+                 })
+
+              },[]);
+        
+             
      }
     
  
