@@ -5,11 +5,17 @@ const path = require('path');
 var app = express();
 
 app.use(express.static('public'));
+app.use(express.static(path.join(__dirname,'../','../','react-app','build')));
+
+;
+console.log(path.join(__dirname,'../','../','react-app','build'))
 
 
 
 
-
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname,'../','../','react-app','build','index.html'));
+  });
  
 
 //var router = express.Router();
