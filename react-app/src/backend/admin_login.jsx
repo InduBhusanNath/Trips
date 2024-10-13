@@ -26,7 +26,7 @@ export default function AdminLogin(){
    
     
 
-    function getAutoAdmin(){      
+    function GetAutoAdmin(){      
               useEffect(()=>{
                  axios.get("/adminLogin/create-auto-admin")
                  .then(response=>{
@@ -140,7 +140,7 @@ export default function AdminLogin(){
                  <div className="row">
                      <div className="col-sm-4">
                         {/* Create Dummy User for First Login*/}
-                        <button className="button" onClick={getAutoAdmin}>Create Dummy Admin User</button>
+                        <button className="button" onClick={GetAutoAdmin}>Create Dummy Admin User</button>
                      </div>
                      <div className="col-sm-4">
                          <p>&nbsp;</p>
