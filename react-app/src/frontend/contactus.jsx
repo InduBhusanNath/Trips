@@ -31,6 +31,16 @@ function TechnicalSEO(){
                    <meta property="og:title" content="MyApp" />
                    <meta property="og:image" content="path/to/image.jpg" />
                </Helmet>
+               <Helmet>
+                <meta charSet="utf-8"/>
+                <title>Cab Service in Guwahati| Book Taxi at Affordable Fares</title>                
+                <meta name="description" content="Book efficient cab service in Guwahati for local and outstation taxi tours. Affordable fares, timely pickup, and customer-centricity distinguish our cabs."/>
+                <meta property="og:title" content="Experience Best Cab Services and Trips" />
+                <meta property="og:image" content={process.env.PUBLIC_URL + 'MainImages/logo.png'}/>
+                <meta property="og:description" content="We are a trusted provider of excellent cab services and tours." />
+                <meta property="og:url" content="https://aeiety.com" />
+                <link rel="canonical" href="https://aeiety.com/guwahati-taxi"/>
+            </Helmet>
         
         </>);
    }

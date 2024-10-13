@@ -23,7 +23,7 @@ function TechnicalSEO(){
              
              <Helmet>
                 <meta charSet="utf-8"/>
-                <title>Cab Service in Guwahati| Book Taxi at Affordable Fares</title>                
+                <title>Cab Service in Guwahati: Book Taxi at Affordable Fares</title>                
                 <meta name="description" content="Book efficient cab service in Guwahati for local and outstation taxi tours. Affordable fares, timely pickup, and customer-centricity distinguish our cabs."/>
                 <meta property="og:title" content="Experience Best Cab Services and Trips" />
                 <meta property="og:image" content={process.env.PUBLIC_URL + 'MainImages/logo.png'}/>

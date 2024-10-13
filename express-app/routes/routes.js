@@ -5,12 +5,11 @@ const path = require('path');
 var app = express();
 
 app.use(express.static('public'));
-var filePath=path.join(__dirname,'../../','react-app','build','index.html');
-app.use(express.static(filePath));
 
 
 
-console.log(filePath)
+
+
  
 
 //var router = express.Router();

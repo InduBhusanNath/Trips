@@ -13,7 +13,7 @@ export default function Footer(){
 }
 function Foot(){
      return(<>
-         <row className="row background-peachpuff padding25">
+         <row className="row background-lightsalmon padding25">
                  <div className="col-sm-3">
                          <section className="padding10 text-center">
                                  <Link to="/" className="text-decoration-none"><img src={process.env.PUBLIC_URL + 'MainImages/logo.png'} className="img-fluid w-50" alt="AeietyTrips"/></Link>
@@ -75,7 +75,7 @@ function Foot(){
 {/*Copyright*/}
 function CopyRight(){
          return(<>
-                 <div className="row background-bisque">
+                 <div className="row background-lightsalmon">
                          <div className="col-sm-4"></div>
                          <div className="col-sm-4">
                                  <section className="font font12">
