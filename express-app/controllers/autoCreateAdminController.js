@@ -7,11 +7,16 @@ const saltRounds = 10;
 //Create Auto Admin
 
 function createautoAdmin(req,res){
-     var bdy=req.body; 
+     var flg=req.body.flag; 
      var pwd='abc123';
      const salt = bcrypt.genSaltSync(saltRounds);
      const saved_pwd=bcrypt.hashSync(pwd,salt);
-
+     
+     if(flg!='1'){
+         res.send("Something Went Wrong, Please Try Again.....");
+         return;
+     }
+      
      userModel.countDocuments({}).then(rows=>{
          if(!rows){               
                  createDummyAdmin();                 
@@ -48,5 +53,5 @@ function createautoAdmin(req,res){
     } 
 }
 module.exports={
-     createautoAdmin:createautoAdmin
+        createautoAdmin
 }

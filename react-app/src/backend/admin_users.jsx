@@ -417,22 +417,22 @@ function AddAdminUser(){
         useEffect(()=>{
            
            axios.get('/adminDashboard/adminUsers?page='+pg).then(function(response){
-              
-               setUsers(response.data);
                
-               const userdata=response.data;
-               userdata.map((usr)=>{
-                      setEditId(usr._id);
-                      setEditEntryDate(usr.entryDate);
-                      setEditName(usr.name);
-                      setEditUsername(usr.username);
-                      setEditAdminStatus(usr.adminStatus);
-                      setEditDesignation(usr.designation);
-                      setEditAddress(usr.address);    
-                      return usr;                 
-               });
+               setUsers(response.data);
 
+               if(Array.isArray(response.data)){
+                     userdata.map((usr)=>{
+                            setEditId(usr._id);
+                            setEditEntryDate(usr.entryDate);
+                            setEditName(usr.name);
+                            setEditUsername(usr.username);
+                            setEditAdminStatus(usr.adminStatus);
+                            setEditDesignation(usr.designation);
+                            setEditAddress(usr.address);    
+                            return usr;                 
+                     });
 
+               }
            }).catch(function(error){
                alert(error);
            });

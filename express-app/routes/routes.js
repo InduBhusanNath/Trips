@@ -5,7 +5,7 @@ const path = require('path');
 var app = express();
 
 app.use(express.static('public'));
-app.use(express.static(path.join(__dirname,'../','../','react-app','build')));
+//app.use(express.static(path.join(__dirname,'../','../','react-app','build')));
 
 
 
@@ -39,9 +39,9 @@ var tourismController=require('../controllers/tourismController.js');
 var placesController=require('../controllers/placesController.js');
 
 /* GET*/
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname,'../','../','react-app','build','index.html'));
-});
+//app.get('/*', function (req, res) {
+  //res.sendFile(path.join(__dirname,'../','../','react-app','build','index.html'));
+//});
 
 
 app.get('/adminDashboard/adminUsers',userController.readUsers);

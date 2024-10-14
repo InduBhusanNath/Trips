@@ -1,9 +1,6 @@
 const userModel=require('../models/userModel.js');
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/mydb');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
-
 
 
 function createUser(req,res){
@@ -55,8 +52,7 @@ function readUsers(req,res){
                    var totalPages=Math.ceil(totalRows/limit);
                    
                    userModel.find({}).skip(offset).limit(limit).then(data=>{
-                        res.json(data);
-                        console.log(data)
+                        res.json(data);                     
                         
                    });                  
                   
