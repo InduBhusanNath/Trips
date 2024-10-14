@@ -419,8 +419,8 @@ function AddAdminUser(){
            axios.get('/adminDashboard/adminUsers?page='+pg).then(function(response){
                
                setUsers(response.data);
-
-               if(Array.isArray(response.data)){
+               var userdata=response.data;
+               if(Array.isArray(userdata)){
                      userdata.map((usr)=>{
                             setEditId(usr._id);
                             setEditEntryDate(usr.entryDate);
