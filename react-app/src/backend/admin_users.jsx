@@ -419,9 +419,9 @@ function AddAdminUser(){
            axios.get('/adminDashboard/adminUsers?page='+pg).then(function(response){
                
                setUsers(response.data);
-               var userdata=response.data;
-               if(Array.isArray(userdata)){
-                     userdata.map((usr)=>{
+              
+               
+                     users.map((usr)=>{
                             setEditId(usr._id);
                             setEditEntryDate(usr.entryDate);
                             setEditName(usr.name);
@@ -432,7 +432,7 @@ function AddAdminUser(){
                             return usr;                 
                      });
 
-               }
+               
            }).catch(function(error){
                alert(error);
            });
