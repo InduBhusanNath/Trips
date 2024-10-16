@@ -63,7 +63,7 @@ function readUsers(req,res){
                     
      
 }
-
+{/*
                    
 //Fetch Edit Users Data
 function editUsersData(req,res){
@@ -217,18 +217,18 @@ function changePasswordByUser(req,res){
         
 }
 
-
+*/}
 module.exports={
       createUser:createUser,
       readUsers:readUsers,
-      editUsersData:editUsersData,
-      editUsers:editUsers,
-      deleteUserData:deleteUserData,
-      deleteUser:deleteUser,
-      priviledgeUserData:priviledgeUserData,
-      changeUserPriviledge:changeUserPriviledge,
-      changePassword:changePassword,
-      changePasswordByUser:changePasswordByUser
+      //editUsersData:editUsersData,
+      //editUsers:editUsers,
+      //deleteUserData:deleteUserData,
+      //deleteUser:deleteUser,
+      //priviledgeUserData:priviledgeUserData,
+      //changeUserPriviledge:changeUserPriviledge,
+      //changePassword:changePassword,
+      //changePasswordByUser:changePasswordByUser
 }
       
 

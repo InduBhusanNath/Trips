@@ -108,7 +108,7 @@ function AddAdminUser(){
                      setPasswordType('text'); 
                }
         }
-      //Edit Form
+       //Edit Form
         function EditUsers(e){
               
               var id=e.target.name;
@@ -126,7 +126,7 @@ function AddAdminUser(){
               .then(function(response){
                      
                      var uEdtData=response.data;
-
+                   {/*
                      //setUseredits(uData);
                      uEdtData.map((eusr)=>{
                              setEditId(eusr._id);
@@ -138,7 +138,7 @@ function AddAdminUser(){
                              setEditAddress(eusr.address);                             
 
                      });
-
+                   */}
                      
 
               })
@@ -364,6 +364,8 @@ function AddAdminUser(){
               
          
       }
+
+      
       //Submit Edit Form
        function edit_handleSubmit(e){
                e.preventDefault();
@@ -421,8 +423,8 @@ function AddAdminUser(){
            axios.get('/adminDashboard/adminUsers?page='+pg).then(function(response){
                
                setUsers(response.data);
-                      
-                      users.map((usr)=>{
+                 {/*     
+                      users.map((usr)=>(
                             setEditId(usr._id);
                             setEditEntryDate(usr.entryDate);
                             setEditName(usr.name);
@@ -430,9 +432,10 @@ function AddAdminUser(){
                             setEditAdminStatus(usr.adminStatus);
                             setEditDesignation(usr.designation);
                             setEditAddress(usr.address);    
-                            return usr;                 
-                     });
-
+                            return usr;  
+                      )               
+                     );
+                */}
                
            }).catch(function(error){
                alert(error);
@@ -613,7 +616,7 @@ function AddAdminUser(){
                  </div>
 
 
-            </div>
+            </div> *
             <div className="row">
               <div className="col-sm-12">
                       <section>
