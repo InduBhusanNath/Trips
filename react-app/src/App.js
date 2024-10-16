@@ -21,22 +21,22 @@ import UniqueAttractionsAssam from "./frontend/unique-attractions-assam";
 import AdminLogin from "./backend/admin_login";
 import AdminDashboard from "./backend/admin_dashboard";
 import AdminUsers from "./backend/admin_users";
-import ForgotPassword from "./backend/forgot_password";
-import Blog from "./backend/blogs";
-import WriteBlog from "./backend/write_blog";
-import ShowBlog from "./backend/show_blog";
-import ContactUsMessage from "./frontend/contactus_message";
-import MessagesContactUs from "./backend/contactus_messages";
-import ManageCabBooking from "./backend/manage-cab-booking";
-import CabBookingProcessing from "./backend/cab-booking-processing";
-import Tourism from "./backend/tourism";
-import TourismWrite from "./backend/tourism-write";
-import TourismEdit from "./backend/tourism-edit";
-import TourismDelete from "./backend/tourism-delete";
-import Places from "./backend/places";
-import PlaceWrite from "./backend/places-write";
-import PlaceEdit from "./backend/place-edit";
-import PlaceDelete from "./backend/place-delete";
+//import ForgotPassword from "./backend/forgot_password";
+//import Blog from "./backend/blogs";
+//import WriteBlog from "./backend/write_blog";
+//import ShowBlog from "./backend/show_blog";
+//import ContactUsMessage from "./frontend/contactus_message";
+//import MessagesContactUs from "./backend/contactus_messages";
+//import ManageCabBooking from "./backend/manage-cab-booking";
+//import CabBookingProcessing from "./backend/cab-booking-processing";
+//import Tourism from "./backend/tourism";
+//import TourismWrite from "./backend/tourism-write";
+//import TourismEdit from "./backend/tourism-edit";
+//import TourismDelete from "./backend/tourism-delete";
+//import Places from "./backend/places";
+//import PlaceWrite from "./backend/places-write";
+//import PlaceEdit from "./backend/place-edit";
+//import PlaceDelete from "./backend/place-delete";
 
 
 const router=createBrowserRouter([
