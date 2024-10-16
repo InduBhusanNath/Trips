@@ -30,13 +30,13 @@ app.use(bodyParser.urlencoded({ extended:true}));
 var userController=require('../controllers/userController.js');
 var adminUserController=require('../controllers/adminUserController.js');
 const createUser = require('../controllers/userController.js');
-var sessionController=require('../controllers/sessionController.js');
-var blogController=require('../controllers/blogController.js');
-var contactUsMessageModel=require('../controllers/contactUsMessageController.js');
-var autoCreateAdminController=require('../controllers/autoCreateAdminController.js');
-var cabBookingController=require('../controllers/cabBookingController.js');
-var tourismController=require('../controllers/tourismController.js');
-var placesController=require('../controllers/placesController.js');
+//var sessionController=require('../controllers/sessionController.js');
+//var blogController=require('../controllers/blogController.js');
+//var contactUsMessageModel=require('../controllers/contactUsMessageController.js');
+//var autoCreateAdminController=require('../controllers/autoCreateAdminController.js');
+//var cabBookingController=require('../controllers/cabBookingController.js');
+//var tourismController=require('../controllers/tourismController.js');
+//var placesController=require('../controllers/placesController.js');
 
 /* GET*/
 //app.get('/*', function (req, res) {
@@ -62,13 +62,13 @@ app.get('/adminDashboard/adminUsers',userController.readUsers);
 
 
 /*POST*/
-app.post('/adminLogin/create-auto-admin',autoCreateAdminController.createautoAdmin);
+//app.post('/adminLogin/create-auto-admin',autoCreateAdminController.createautoAdmin);
 app.post('/adminDashboard/adminUsers/user_post',userController.createUser);
 //app.post('/adminDashboard/adminUsers/user_edit_data',userController.editUsersData);
 //app.post('/adminDashboard/adminUsers/user_edit',userController.editUsers); 
 //app.post('/adminDashboard/adminUsers/user_delete_data',userController.deleteUserData);
 //app.post('/adminDashboard/adminUsers/user_delete',userController.deleteUser); 
-//app.post('/adminDashboard/adminUsers/user_priviledge_data',userController.priviledgeUserData);
+app.post('/adminDashboard/adminUsers/user_priviledge_data',userController.priviledgeUserData);
 //app.post('/adminDashboard/adminUsers/user_priviledge_data_change',userController.changeUserPriviledge);
 //app.post('/change_password',userController.changePassword);
 //app.post('/change_password_by_user',userController.changePasswordByUser);
