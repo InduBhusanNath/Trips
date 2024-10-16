@@ -204,10 +204,15 @@ function TabulateUsers(){
       useEffect(()=>{
           
              axios.get('/adminDashboard/adminUsers?page='+pg).then(response=>{
-                 
-                     setUsers(response.data);             
-                    
-                      
+                      if(Array.isArray(response.data)){
+                             setUsers(response.data);  
+                      }else{
+                            setUsers([]); 
+                      }
+                     
+                           
+                     
+                     
                  
              }).catch(function(error){
                  alert(error);
@@ -254,9 +259,12 @@ function TabulateUsers(){
        }
 
        
-       alert(Array.isArray(users))
+      
        
       
+       
+       
+       
        
        var us=users.map(u=>
               <tr key={u._id}>
@@ -271,10 +279,8 @@ function TabulateUsers(){
                      <td className="text-center"><a href='javascript:void(0);' name={u._id} onClick={DeleteUserData}>&#10060;</a></td>
                                                   
               </tr>
-       );
-       
-       
-                                                               
+              
+       );                                            
 
 
 
@@ -298,7 +304,7 @@ function TabulateUsers(){
                                                  </tr>
                                           </thead>
                                           <tbody>
-                                                  {us}
+                                                {us}  
                                           </tbody>
 
                                    </table>
