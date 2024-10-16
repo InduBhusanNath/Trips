@@ -45,17 +45,17 @@ var placesController=require('../controllers/placesController.js');
 
 
 app.get('/adminDashboard/adminUsers',userController.readUsers);
-app.get('/admin_session',sessionController.adminSession);
-app.get('/admin_logout',sessionController.adminLogOut);
-app.get('/adminDashboard/blogs/',blogController.readBlog);
-app.get('/adminDashboard/blogs/show_blog',blogController.edit_displayBlog);
-app.get('/adminDashboard/contactus-messages/',contactUsMessageModel.readMessages);
-app.get('/adminDashboard/cab-booking-data/',cabBookingController.readCabBooking);
-app.get('/adminDashboard/manage-cab-booking/cab-booking-processing/get-cab-client-data/',cabBookingController.clientCabBooking);
-app.get('/adminDashboard/tourism',tourismController.tourismDetailsRead);
-app.get('/adminDashboard/tourism/tourism-edit',tourismController.tourismDetailsEdit);
-app.get('/adminDashboard/places',placesController.placeRead);
-app.get('/adminDashboard/places/place-edit',placesController.placeEdit);
+//app.get('/admin_session',sessionController.adminSession);
+//app.get('/admin_logout',sessionController.adminLogOut);
+//app.get('/adminDashboard/blogs/',blogController.readBlog);
+//app.get('/adminDashboard/blogs/show_blog',blogController.edit_displayBlog);
+//app.get('/adminDashboard/contactus-messages/',contactUsMessageModel.readMessages);
+//app.get('/adminDashboard/cab-booking-data/',cabBookingController.readCabBooking);
+//app.get('/adminDashboard/manage-cab-booking/cab-booking-processing/get-cab-client-data/',cabBookingController.clientCabBooking);
+//app.get('/adminDashboard/tourism',tourismController.tourismDetailsRead);
+//app.get('/adminDashboard/tourism/tourism-edit',tourismController.tourismDetailsEdit);
+//app.get('/adminDashboard/places',placesController.placeRead);
+//app.get('/adminDashboard/places/place-edit',placesController.placeEdit);
 
 
     
@@ -75,21 +75,21 @@ app.post('/adminDashboard/adminUsers/user_post',userController.createUser);
 app.post('/check_admin_user',adminUserController.checkAdminUser);
 //app.post('/adminDashboard/blogs/write_blog/create_blog',upload.single("n_blogpic"),blogController.createBlog);
 //app.post('/adminDashboard/blogs/show_blog/update-blog-image',upload.single('edit_n_blogpic'),blogController.edit_blogImage);
-app.post('/adminDashboard/blogs/show_blog/delete-blog-image',blogController.delete_blogImage);
-app.post('/adminDashboard/blogs/show_blog/update-blog-content',blogController.edit_blogContent);
-app.post('/adminDashboard/blogs/show_blog/delete-blog-content',blogController.delete_blogContent);
-app.post('/contact-us-message',contactUsMessageModel.visitorMessage);
-app.post('/adminDashboard/contactus-messages/delete-message/',contactUsMessageModel.deleteMessage);
-app.post('/create-cab-booking/',cabBookingController.createCabBooking);
-app.post('/update-cab-booking/',cabBookingController.updateCabBooking);
-app.post('/get-delete-cab-booking-data/',cabBookingController.getDeleteCabBookingData);
-app.post('/delete-cab-booking-data/',cabBookingController.deleteCabBookingData);
-app.post('/create-tourism-details/',tourismController.tourismDetailsWrite);
-app.post('/adminDashboard/tourism/tourism-update',tourismController.tourismDetailsUpdate);
-app.post('/adminDashboard/tourism/tourism-delete',tourismController.tourismDetailsDelete);
-app.post('/adminDashboard/places/place-write',placesController.placeWrite);
-app.post('/adminDashboard/places/place-edit',placesController.placeUpdate);
-app.post('/adminDashboard/places/place-delete',placesController.placeDelete);
+//app.post('/adminDashboard/blogs/show_blog/delete-blog-image',blogController.delete_blogImage);
+//app.post('/adminDashboard/blogs/show_blog/update-blog-content',blogController.edit_blogContent);
+//app.post('/adminDashboard/blogs/show_blog/delete-blog-content',blogController.delete_blogContent);
+//app.post('/contact-us-message',contactUsMessageModel.visitorMessage);
+//app.post('/adminDashboard/contactus-messages/delete-message/',contactUsMessageModel.deleteMessage);
+//app.post('/create-cab-booking/',cabBookingController.createCabBooking);
+//app.post('/update-cab-booking/',cabBookingController.updateCabBooking);
+//app.post('/get-delete-cab-booking-data/',cabBookingController.getDeleteCabBookingData);
+//app.post('/delete-cab-booking-data/',cabBookingController.deleteCabBookingData);
+//app.post('/create-tourism-details/',tourismController.tourismDetailsWrite);
+//app.post('/adminDashboard/tourism/tourism-update',tourismController.tourismDetailsUpdate);
+//app.post('/adminDashboard/tourism/tourism-delete',tourismController.tourismDetailsDelete);
+//app.post('/adminDashboard/places/place-write',placesController.placeWrite);
+//app.post('/adminDashboard/places/place-edit',placesController.placeUpdate);
+//app.post('/adminDashboard/places/place-delete',placesController.placeDelete);
 
 
 
