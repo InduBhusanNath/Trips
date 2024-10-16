@@ -635,7 +635,7 @@ function AddAdminUser(){
 
                                            </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody>{/*
                                            {users.map((user)=>(
                                                  <tr key={user._id}>
                                                          <td className="text-center"><a href='javascript:void(0);' name={user._id} onClick={PrivilegeUser}>&#10012;</a></td>
@@ -650,6 +650,7 @@ function AddAdminUser(){
                                                          
                                                  </tr>
                                           ))}
+                                                 */}
                                     </tbody>
 
                             </table>
