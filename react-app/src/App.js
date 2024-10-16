@@ -99,39 +99,40 @@ const router=createBrowserRouter([
          element:<AdminUsers/>
       },
       {
-        path:"/adminDashboard/blogs/",
-        element:<Blog/>
+        //path:"/adminDashboard/blogs/",
+        //element:<Blog/>
 
       },
       {
-         path:"/adminDashboard/blogs/write_blog/",
-         element:<WriteBlog/>
+         //path:"/adminDashboard/blogs/write_blog/",
+         //element:<WriteBlog/>
 
       },      
-      {  path:"/adminDashboard/blogs/show_blog/",
-         element:<ShowBlog/>
+      {  
+        //path:"/adminDashboard/blogs/show_blog/",
+         //element:<ShowBlog/>
       },
       {  
-         path:"/adminDashboard/contactus-messages/",
-         element:<MessagesContactUs/>
+         //path:"/adminDashboard/contactus-messages/",
+         //element:<MessagesContactUs/>
 
       },
       {  
-        path:"/adminDashboard/places/",
-        element:<Places/>
+        //path:"/adminDashboard/places/",
+        //element:<Places/>
 
      },
      {  
-      path:"/adminDashboard/places/place-write",
-      element:<PlaceWrite/>
+      //path:"/adminDashboard/places/place-write",
+      //element:<PlaceWrite/>
     },
     {  
-      path:"/adminDashboard/places/place-edit",
-      element:<PlaceEdit/>
+      //path:"/adminDashboard/places/place-edit",
+      //element:<PlaceEdit/>
     },
     {  
-      path:"/adminDashboard/places/place-delete",
-      element:<PlaceDelete/>
+      //path:"/adminDashboard/places/place-delete",
+      //element:<PlaceDelete/>
     }
 
       
@@ -140,39 +141,39 @@ const router=createBrowserRouter([
        
   },
    {  
-   path:"/adminDashboard/manage-cab-booking/",
-   element:<ManageCabBooking/>
+   //path:"/adminDashboard/manage-cab-booking/",
+   //element:<ManageCabBooking/>
    },
    {  
-   path:"/adminDashboard/manage-cab-booking/cab-booking-processing/",
-   element:<CabBookingProcessing/>
+   //path:"/adminDashboard/manage-cab-booking/cab-booking-processing/",
+   //element:<CabBookingProcessing/>
    },
    {
-      path:"/contactus",
-      element:<ContactUsMessage/>
+      //path:"/contactus",
+      //element:<ContactUsMessage/>
    },
     {
-     path:"/forgotPassword",
-     element:<ForgotPassword/>
+     //path:"/forgotPassword",
+     //element:<ForgotPassword/>
    },
    {
-      path:"/adminDashboard/tourism",
-      element:<Tourism/>
+      //path:"/adminDashboard/tourism",
+      //element:<Tourism/>
 
     },
     {
-      path:"/adminDashboard/tourism/tourism-write",
-      element:<TourismWrite/>
+      //path:"/adminDashboard/tourism/tourism-write",
+      //element:<TourismWrite/>
 
     },
     {
-      path:"/adminDashboard/tourism/tourism-edit",
-      element:<TourismEdit/>
+      //path:"/adminDashboard/tourism/tourism-edit",
+      //element:<TourismEdit/>
 
     },
     {
-      path:"/adminDashboard/tourism/tourism-delete",
-      element:<TourismDelete/>
+      //path:"/adminDashboard/tourism/tourism-delete",
+      //element:<TourismDelete/>
 
     },
    
