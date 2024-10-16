@@ -206,6 +206,7 @@ function TabulateUsers(){
              axios.get('/adminDashboard/adminUsers?page='+pg).then(response=>{
                       if(Array.isArray(response.data)){
                              setUsers(response.data);  
+                             alert("yes")
                       }else{
                             setUsers([]); 
                       }
