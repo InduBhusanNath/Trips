@@ -254,7 +254,7 @@ function TabulateUsers(){
        }
 
        
-
+       alert(Array.isArray(users))
        
       
        
